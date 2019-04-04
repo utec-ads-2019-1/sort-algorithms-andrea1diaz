@@ -1,17 +1,20 @@
 #include "tester.h"
 
 void integersBubble(void *elements, int first, int second) {
-    int *array = (int*) elements;
-    if (array[first] > array[second]) {
-        swap(array[first], array[second]);
-    }
+  int *array = (int*) elements;
+  if (array[first] > array[second]) {
+    swap(array[first], array[second]);
+  }
 }
 
-void integersSelect(void *elements, int first, int min) {
+void integersSelect(void *elements, int i, int min) {
+  int tmp;
   int *array = (int*) elements;
-    if (array[first] < array[min]) {
-      min = first;
-    }
+  if (min != i) {
+    tmp = array[i];
+    array[i] = array[min];
+    array[min] = tmp;
+  }
 }
 
 Sort* Tester::getSort(Algorithm sort, void *array, size_t size) {

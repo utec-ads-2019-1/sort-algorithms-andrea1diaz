@@ -12,10 +12,12 @@ class SelectSort : public Sort {
           int *array = (int*) elements;
             for (int i = 0; i < size - 1; ++i) {
               min = i;
-              for (int j = 0; j < size - i - 1; ++j) {
-                compare(array, j, j + 1);
+              for (int j = i + 1; j < size; ++j) {
+                if (array[j] < array[min]) {
+                  min = j;
+                }
               }
-              std::swap(&array[min], &array[i]);
+              compare(elements, i, min);
             }
         }
 
