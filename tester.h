@@ -28,7 +28,8 @@ using namespace std;
 #   define ASSERT(condition, message) do { } while (false)
 #endif
 
-enum Algorithm { bubblesort, selectsort, insertsort, shellsort, quicksort, mergesort };
+// enum Algorithm { bubblesort, selectsort, insertsort, shellsort, quicksort, mergesort };
+enum Algorithm { bubblesort, selectsort };
 
 typedef void (*fptr)(void*, int, int);
 
