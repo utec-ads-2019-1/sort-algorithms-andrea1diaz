@@ -3,12 +3,17 @@
 
 #include "sort.h"
 
-class QuickSort : public Sort {       
+class QuickSort : public Sort {
     public:
         QuickSort(void *elements, size_t size) : Sort(elements, size) {}
 
         void execute(void (*compare)(void*, int, int)) {
-            // TODO
+          int i = 0;
+          int j = size - 1;
+        }
+
+        void sort(void (*compare)(void*, int, int)) {
+
         }
 
         inline string name() { return "QuickSort"; }
